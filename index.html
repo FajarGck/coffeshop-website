@@ -1,59 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>Gemec</title>
-    <style>
-      #navbar a {
-        color: #ffff;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Belajar Tailwind</title>
+    <link rel="icon" type="image/x-icon" href="./asset/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                lobster: "'Lobster Two', cursive",
+              },
+              backgroundImage: {
+                banner: "url('./asset/banner.jpg')",
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body style="color: #ffff;">
-    <!--navbar-->
-    <section id="navbar">
-        <div class="navbar navbar-expand-lg bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand text-light" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  </ul>
+<body class="font-lobster bg-zinc-950 text-white">
+    
+    <!-- nav -->
+    <nav id="nav" class="bg-transparent fixed w-full z-20 top-0 left-0 ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+            <img src="./asset/logo.png" alt="logo" class="h-10 font-lobster ">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">itcaffe</span>
+        </a>
+        <div class="flex md:order-2 justify-between gap-1">
+            <button id="cart" type="button" class="p-2">
+                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+            </button>
+            <button id="navbar-sticky" type="button" class=" inline-flex items-center mt-1 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
+              <svg class="w-5 h-5" >
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+            </button>
+        </div>
+        <div id="nav-list" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" >
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  xl:text-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-white bg-yellow-500 rounded md:bg-transparent md:text-bg-yellow-500 md:p-0 md:text-yellow-500" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Tentang Kami</a>
+            </li>
+            <li>
+              <a href="#program" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Program</a>
+            </li>
+            <li>
+                <a href="#pembimbing" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Pembimbing</a>
+            </li>
+            <li>
+              <a href="#faqs" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500 md::hover:bg-transparent">FaQ's</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <section id="hero" class="h-screen shadow-sm bg-banner bg-no-repeat bg-cover bg-blend-darken bg-right md:bg-right-bottom">
+        <div class="container mx-auto w-ful h-full flex justify-start items-center lg:flex-row">
+            <div class="grid w-full text-start max-w-2xl px-4 py-2 lg:gap-0 xl:gap-0">
+                    <h1 class="text-3xl pb-3 font-bold tracking-wide text-white sm:text-5xl xl:text-6xl md:max-w-screen-2xl">Rasakan Sensasi Bullish Mood Dengan Sekali Pump di Cangkir <span class="text-yellow-600">Kopi</span>mu</h1>
+                    <p class="text-sm sm:text-lg md:text-2xl pb-4 text-slate-700 font-medium">Lorem ipsum dolor sit amet consectetur atur obcaecati a excepturi! Lorem ipsum dolor sit amet.</p>
+                    <div class="flex space-y-2 sm:justify-start sm:space-y-0 sm:space-x-4">
+                        <a href="" class="inline-flex ring-1 text-xl px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-4xl hover:bg-yellow-700 focus:ring-4 ">
+                            Beli Sekarang!
+                        </a>
+                    </div>    
             </div>
         </div>
-
-
-
-
     </section>
 
+    <!-- <hr class="pt-14 border-t-4 w-72 lg:max-w-6xl mx-auto"> -->
+
+     <!-- about -->
+    <section id="about" class="pt-24 pb-10 scroll-p-12 ">
+        <div class="w-screen text-center mb-10">
+            <span class="font-bold text-2xl text-white py-4 xl:text-4xl ">Tentang Kami</span>
+        </div>
+        <div class="container grid sm:gap-6     grid-cols-1 gap-0 mx-auto sm:grid-cols-2 py-4">
+            <div class="flex justify-center rounded-3xl">
+                <img src="./asset/about.jpg" class="h-fit w-auto shadow-xl bg-cover " alt="about-img-1">
+            </div>
+            <div class="mb-5 flex justify-center flex-col h-3/4 px-4">
+                    <h1 class="text-2xl font-bold text-slate-900 py-3 xl:text-3xl">Kenapa Kopi Kami Berbeda?</h1>
+                    <p class="text-sm font-medium tracking-wide text-slate-700 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
+                </div>
+            <div class="mb-5 flex justify-center flex-col h-3/4 px-4 order-4 sm:order-3">
+                    <h1 class="text-2xl font-bold text-slate-900 py-3 xl:text-3xl">Kenapa Kopi Kami Berbeda?</h1>
+                    <p class="text-sm font-medium tracking-wide text-slate-700 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
+            </div>
+            <div class="flex justify-center border order-3 rounded-3xl sm:order-4">
+                <img src="./asset/caffeinside.jpeg" class="h-fit w-auto shadow-xl bg-cover " alt="about-img-2">
+            </div>
+        </div>
+    </section>
+
+    <!-- quotes -->
+    <!-- <section class="bg-white py-10 :bg-gray-900">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+            <figure class="max-w-screen-md mx-auto">
+                <svg class="h-12 mx-auto mb-3 text-gray-400 :text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/>
+                </svg> 
+                <blockquote>
+                    <p class="text-2xl font-medium text-gray-900 ">"Orang dengan mental health issue itu butuh didengar bos, bukan diceramaih atau dibanding-bandingkan"</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center mt-6">
+                    <img class="w-10 h-10 rounded-full mr-2" src="./asset/quote-pp.jpg" alt="profile picture">
+                    <div class="flex items-center divide-x-2 divide-gray-500 :divide-gray-700">
+                        <div class="pr-3 font-medium text-gray-900 ">Dr. Tirta</div>
+                        <div class="pl-3 text-sm font-light text-gray-500 :text-gray-400">Influencer</div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </section> -->
+
+    <!-- program -->
+    <!-- <section id="program" class="flex flex-col py-10">
+        <span class="font-bold text-2xl text-slate-900 text-center py-4 xl:text-4xl">Layanan Program Kami</span>
+        <div class="container flex flex-row flex-wrap gap-2 justify-center mx-auto xl:gap-0 ">
+            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
+                <a href="#">
+                    <h5 class="mb-2 text-lg xl:text-2xl
+                     font-bold tracking-tight text-gray-900">Program Konseling Individu</h5>
+                </a>
+                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Sesi konseling empat mata dengan siswa untuk membahas masalah pribadi, akademik, atau sosial mereka</p>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
+                    Ikut Program
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
+                <a href="#">
+                    <h5 class="mb-2 text-lg xl:text-2xl
+                     font-bold tracking-tight text-gray-900 ">Manajemen Stress</h5>
+                </a>
+                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Membantu siswa untuk lebih mengenal cara menanggapi stress akibat masalah akademik, sosial, ataupun relationship</p>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
+                    Ikut Program
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
+                <a href="#">
+                    <h5 class="mb-2 text-lg xl:text-2xl
+                     font-bold tracking-tight text-gray-900 ">Bimbingan Karier</h5>
+                </a>
+                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Membimbing siswa untuk merenanakan karier mereka dengan baik serta lebih mengenali potensi dari masing-masing siswa</p>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
+                    Ikut Program
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <hr class="py-8 mt-4 border-t-4 max-w-4xl mx-auto"> -->
+
+
+    <!-- Pembimbing -->
+    <!-- <section id="pembimbing" class=" py-10">
+        <span>
+            <h1 class="text-2xl font-bold text-slate-900 text-center xl:text-4xl">Guru Pembimbing Kami</h1>
+            <p class="font-medium text-slate-800 text-center mb-4 xl:text-xl xl:mb-8">Konsisten, Presistent, Fokus</p>
+        </span>
+        <div class=" mx-auto container flex flex-col flex-wrap items-center gap-4 sm:flex-row sm:justify-evenly sm:gap-6">
+            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
+                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
+                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
+                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
+                    <ul class="flex flex-row justify-center gap-2">
+                        <li><a href="#">🔷</a></li>
+                        <li><a href="#">🔶</a></li>
+                        <li><a href="#">🔻</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
+                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
+                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
+                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
+                    <ul class="flex flex-row justify-center gap-2">
+                        <li><a href="#">🔷</a></li>
+                        <li><a href="#">🔶</a></li>
+                        <li><a href="#">🔻</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
+                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
+                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
+                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
+                    <ul class="flex flex-row justify-center gap-2">
+                        <li><a href="#">🔷</a></li>
+                        <li><a href="#">🔶</a></li>
+                        <li><a href="#">🔻</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
+                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
+                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
+                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
+                    <ul class="flex flex-row justify-center gap-2">
+                        <li><a href="#">🔷</a></li>
+                        <li><a href="#">🔶</a></li>
+                        <li><a href="#">🔻</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-sky-700 h-4"></div>
+        </div>
+
+    </section> -->
+
+    <!-- FaQ -->
+   
+
+    <!-- popup -->
+    <!-- <section id="popup">
+        <div class="fixed bottom-4 right-4 z-[999] mb-4">
+            <div class="bg-[#003a0b] fa-beat text-6xl h-full rounded-full">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp fa-sm p-2 rounded-full m-2 text-center h-auto text-white "></i>
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- footer -->
+    <!-- <footer class="bg-gray-800" >
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-400 sm:text-center ">© 2023 <a href="#" class="hover:underline">BkWEb™ | Fajar Ramadhan</a>. All Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center justify-between gap-4 mt-3 text-sm font-medium text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </footer> -->
 
 
 
 
+<script>
+    // show navbar
+    document.addEventListener("DOMContentLoaded", () => {
+        const navbarButton = document.getElementById("navbar-sticky");
+        const navbarList = document.getElementById("nav-list");
+
+        navbarButton.addEventListener("click", () => {
+            navbarList.classList.toggle("hidden");
+        });
+    });
+</script>
+<script>
+    // faq expand
+    const faq = document.querySelectorAll('.faq');
+
+    faq.forEach(faq => {
+        const question = faq.querySelector('.question');
+        const answer = faq.querySelector('.answer');
+
+        question.addEventListener("click", () => {
+            faq.classList.toggle("active");
+            if (faq.classList.contains("active")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
+    })
+</script>
+
+<script>
+    const nav = document.getElementById('nav');
+
+function changeBg() {
+    if (window.scrollY > 20){
+        nav.style.backgroundColor = 'rgba(9,9,11)';
+        nav.style.borderBottom = '1px solid gainsboro';
+    } else {
+        nav.style.backgroundColor = 'transparent';
+        nav.style.borderBottom = 'none';
+    }
+    
+}
+
+window.addEventListener('scroll', changeBg)
 
 
+</script>
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
-    </script>
 </body>
 </html>
