@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Belajar Tailwind</title>
     <link rel="icon" type="image/x-icon" href="./asset/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
@@ -21,7 +21,7 @@
             }
           }
         }
-      </script>
+    </script>
 </head>
 <body class="font-lobster bg-zinc-950 text-white">
     
@@ -34,7 +34,7 @@
         </a>
         <div class="flex md:order-2 justify-between gap-1">
             <button id="cart" type="button" class="p-2">
-                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-cart-shopping fa-lg text-white hover:text-zinc-400"></i>
             </button>
             <button id="navbar-sticky" type="button" class=" inline-flex items-center mt-1 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
               <svg class="w-5 h-5" >
@@ -45,19 +45,16 @@
         <div id="nav-list" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" >
           <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  xl:text-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 text-white bg-yellow-500 rounded md:bg-transparent md:text-bg-yellow-500 md:p-0 md:text-yellow-500" aria-current="page">Home</a>
+              <a href="#" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-yellow-500 md:hover:bg-transparent md:p-0 md:hover:text-yellow-500" aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#about" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Tentang Kami</a>
+              <a href="#about" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-yellow-500 md:hover:bg-transparent md:p-0 md:hover:text-yellow-500">Tentang Kami</a>
             </li>
             <li>
-              <a href="#program" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Program</a>
+              <a href="#menu" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-yellow-500 md:hover:bg-transparent md:p-0 md:hover:text-yellow-500">Menu</a>
             </li>
             <li>
-                <a href="#pembimbing" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500  md::hover:bg-transparent">Pembimbing</a>
-            </li>
-            <li>
-              <a href="#faqs" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-gray-100 md:hover:bg-transparent md:hover:text-bg-yellow-500 md:p-0 md:hover:text-yellow-500 md::hover:bg-transparent">FaQ's</a>
+                <a href="#kontak" class="block py-2 pl-3 pr-4 text-white rounded xl:text-xl hover:bg-yellow-500 md:hover:bg-transparent md:p-0 md:hover:text-yellow-500">Kontak</a>
             </li>
           </ul>
         </div>
@@ -69,193 +66,269 @@
         <div class="container mx-auto w-ful h-full flex justify-start items-center lg:flex-row">
             <div class="grid w-full text-start max-w-2xl px-4 py-2 lg:gap-0 xl:gap-0">
                     <h1 class="text-3xl pb-3 font-bold tracking-wide text-white sm:text-5xl xl:text-6xl md:max-w-screen-2xl">Rasakan Sensasi Bullish Mood Dengan Sekali Pump di Cangkir <span class="text-yellow-600">Kopi</span>mu</h1>
-                    <p class="text-sm sm:text-lg md:text-2xl pb-4 text-slate-700 font-medium">Lorem ipsum dolor sit amet consectetur atur obcaecati a excepturi! Lorem ipsum dolor sit amet.</p>
-                    <div class="flex space-y-2 sm:justify-start sm:space-y-0 sm:space-x-4">
-                        <a href="" class="inline-flex ring-1 text-xl px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-4xl hover:bg-yellow-700 focus:ring-4 ">
+                    <p class="text-sm sm:text-lg md:text-2xl pb-4 text-slate-300 font-medium">Lorem ipsum dolor sit amet consectetur atur obcaecati a excepturi! Lorem ipsum dolor sit amet.</p>
+                    <button class="flex w-fit space-y-2 sm:justify-start sm:space-y-0 sm:space-x-4 transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg hover:border-t-8 hover:border-b-0 hover:bg-yellow-700 hover:border-t-yellow-700 hover:shadow-lg">
+                        <a href="#menu" class="inline-flex ring-1 text-2xl px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-500 md:text-3xl  focus:ring-4 ">
                             Beli Sekarang!
                         </a>
-                    </div>    
+                    </button>    
             </div>
         </div>
     </section>
 
-    <!-- <hr class="pt-14 border-t-4 w-72 lg:max-w-6xl mx-auto"> -->
+    <!-- <hr class="py-8 mt-4 border-t-4 w-5/6 mx-auto"> -->
+
 
      <!-- about -->
-    <section id="about" class="pt-24 pb-10 scroll-p-12 ">
+    <section id="about" class="pt-20 pb-10 scroll-p-12 ">
         <div class="w-screen text-center mb-10">
             <span class="font-bold text-2xl text-white py-4 xl:text-4xl ">Tentang Kami</span>
         </div>
-        <div class="container grid sm:gap-6     grid-cols-1 gap-0 mx-auto sm:grid-cols-2 py-4">
-            <div class="flex justify-center rounded-3xl">
-                <img src="./asset/about.jpg" class="h-fit w-auto shadow-xl bg-cover " alt="about-img-1">
+        <div class="container grid grid-cols-1  gap-2 sm:h-fit sm:mx-auto sm:gap-3 sm:grid-cols-2 py-4">
+            <div class="inline w-5/6  rounded-xl md:w-auto md:h-full">
+                <img src="./asset/about.jpg" class="inline h-fit w-auto ring-gray-200 ring-2 shadow-xl rounded-xl " alt="about-img-1">
             </div>
-            <div class="mb-5 flex justify-center flex-col h-3/4 px-4">
-                    <h1 class="text-2xl font-bold text-slate-900 py-3 xl:text-3xl">Kenapa Kopi Kami Berbeda?</h1>
-                    <p class="text-sm font-medium tracking-wide text-slate-700 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
-                </div>
-            <div class="mb-5 flex justify-center flex-col h-3/4 px-4 order-4 sm:order-3">
-                    <h1 class="text-2xl font-bold text-slate-900 py-3 xl:text-3xl">Kenapa Kopi Kami Berbeda?</h1>
-                    <p class="text-sm font-medium tracking-wide text-slate-700 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
+            <div class="ml-6 sm:m-0 h-fit p-2 xl:pt-14">
+                <h1 class="text-2xl inline font-bold text-yellow-600 py-3 xl:text-3xl">Kenapa Kopi Kami Berbeda?</h1>
+                <p class="text-sm font-medium tracking-wide text-slate-300 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
             </div>
-            <div class="flex justify-center border order-3 rounded-3xl sm:order-4">
-                <img src="./asset/caffeinside.jpeg" class="h-fit w-auto shadow-xl bg-cover " alt="about-img-2">
+            <div class="ml-6 p-2 order-4 sm:order-3">
+                    <h1 class="text-2xl inline font-bold text-yellow-600 py-3 xl:text-3xl">Tempat Kami Cozy Banget Loh!</h1>
+                    <p class="text-sm font-medium tracking-wide text-slate-300 xl:text-xl">Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus, eligendi rem placeat nostrum sequi! adipisicing elit. Modi error neque ut consequuntur voluptatum Lorem ipsum.</p>
+            </div>
+            <div class="inline w-5/6  rounded-xl order-3  sm:order-4">
+                <img src="./asset/caffeinside.jpeg" class="h-fit w-auto ring-gray-200 ring-2 shadow-xl rounded-xl" alt="about-img-2">
             </div>
         </div>
     </section>
 
-    <!-- quotes -->
-    <!-- <section class="bg-white py-10 :bg-gray-900">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <figure class="max-w-screen-md mx-auto">
-                <svg class="h-12 mx-auto mb-3 text-gray-400 :text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/>
-                </svg> 
-                <blockquote>
-                    <p class="text-2xl font-medium text-gray-900 ">"Orang dengan mental health issue itu butuh didengar bos, bukan diceramaih atau dibanding-bandingkan"</p>
-                </blockquote>
-                <figcaption class="flex items-center justify-center mt-6">
-                    <img class="w-10 h-10 rounded-full mr-2" src="./asset/quote-pp.jpg" alt="profile picture">
-                    <div class="flex items-center divide-x-2 divide-gray-500 :divide-gray-700">
-                        <div class="pr-3 font-medium text-gray-900 ">Dr. Tirta</div>
-                        <div class="pl-3 text-sm font-light text-gray-500 :text-gray-400">Influencer</div>
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-    </section> -->
-
-    <!-- program -->
-    <!-- <section id="program" class="flex flex-col py-10">
-        <span class="font-bold text-2xl text-slate-900 text-center py-4 xl:text-4xl">Layanan Program Kami</span>
-        <div class="container flex flex-row flex-wrap gap-2 justify-center mx-auto xl:gap-0 ">
-            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
-                <a href="#">
-                    <h5 class="mb-2 text-lg xl:text-2xl
-                     font-bold tracking-tight text-gray-900">Program Konseling Individu</h5>
-                </a>
-                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Sesi konseling empat mata dengan siswa untuk membahas masalah pribadi, akademik, atau sosial mereka</p>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
-                    Ikut Program
-                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
-                <a href="#">
-                    <h5 class="mb-2 text-lg xl:text-2xl
-                     font-bold tracking-tight text-gray-900 ">Manajemen Stress</h5>
-                </a>
-                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Membantu siswa untuk lebih mengenal cara menanggapi stress akibat masalah akademik, sosial, ataupun relationship</p>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
-                    Ikut Program
-                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="w-auto m-2 shadow-lg lg:max-w-md max-w-sm p-4 bg-white border border-gray-200 rounded-lg">
-                <a href="#">
-                    <h5 class="mb-2 text-lg xl:text-2xl
-                     font-bold tracking-tight text-gray-900 ">Bimbingan Karier</h5>
-                </a>
-                <p class="mb-3 text-sm xl:text-xl font-normal text-gray-700 :text-gray-400">Membimbing siswa untuk merenanakan karier mereka dengan baik serta lebih mengenali potensi dari masing-masing siswa</p>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white lg:text-lg  bg-yellow-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 :bg-blue-600 :hover:bg-yellow-600 :focus:ring-blue-800">
-                    Ikut Program
-                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <hr class="py-8 mt-4 border-t-4 max-w-4xl mx-auto"> -->
-
-
-    <!-- Pembimbing -->
-    <!-- <section id="pembimbing" class=" py-10">
+    
+    <!-- menu  -->
+    <section id="menu" class="pt-20 pb-10 scroll-p-12">
         <span>
-            <h1 class="text-2xl font-bold text-slate-900 text-center xl:text-4xl">Guru Pembimbing Kami</h1>
-            <p class="font-medium text-slate-800 text-center mb-4 xl:text-xl xl:mb-8">Konsisten, Presistent, Fokus</p>
+            <h1 class="text-2xl font-bold text-white text-center xl:text-4xl mb-4 xl:mb-8">Menu</h1>
         </span>
-        <div class=" mx-auto container flex flex-col flex-wrap items-center gap-4 sm:flex-row sm:justify-evenly sm:gap-6">
-            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
-                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
-                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
-                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
-                    <ul class="flex flex-row justify-center gap-2">
-                        <li><a href="#">🔷</a></li>
-                        <li><a href="#">🔶</a></li>
-                        <li><a href="#">🔻</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
-                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
-                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
-                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
-                    <ul class="flex flex-row justify-center gap-2">
-                        <li><a href="#">🔷</a></li>
-                        <li><a href="#">🔶</a></li>
-                        <li><a href="#">🔻</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
-                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
-                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
-                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
-                    <ul class="flex flex-row justify-center gap-2">
-                        <li><a href="#">🔷</a></li>
-                        <li><a href="#">🔶</a></li>
-                        <li><a href="#">🔻</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col w-72 items-center rounded-2xl shadow-xl">
-                <img src="https://placeholder.com/200" alt="dummy" class="w-full object-cover rounded-t-lg">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-lg font-semibold tracking-tight mb-2">Drs. Mohamad Hatta</h1>
-                    <p class="text-sm text-center tracking-tight">Lorem ipsum dolor</p>
-                    <p class="text-sm text-center tracking-tight mb-4">0012391392103910310</p>
-                    <ul class="flex flex-row justify-center gap-2">
-                        <li><a href="#">🔷</a></li>
-                        <li><a href="#">🔶</a></li>
-                        <li><a href="#">🔻</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="bg-sky-700 h-4"></div>
+        <hr class="py-4 mt-4 w-5/6 mx-auto">
+        <div class="container mb-4 px-6 md:px-28 xl:mb-8 ">
+            <h1 class="text-base font-bold text-white mb-4 md:text-xl xl:mb-8">Daftar Menu:
+                <span id="product" class="absolute">
+                    <button type="menu" class="menu container w-full bg-zinc-900 mx-auto ">
+                        <div class="main px-2 flex justify-between gap-2">
+                            <h2 class="tracking-tight font-bold space-x-2 text-zinc-50 md:text-xl">Minuman</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:white}</style><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                        </div>
+                        <div class="list flex flex-col overflow-hidden max-h-0 active:max-h-max">
+                         <a href="" class=" border-b-2 border-zinc-50">Desert</a href="">
+                         <a href="" class=" border-b-2 border-zinc-50">Cake</a href="">
+                         <a href="" class=" border-b-2 border-zinc-50">Breakfast</a href="">
+                        </div>
+                    </button>
+                </span>
+            </h1>
         </div>
-
-    </section> -->
-
-    <!-- FaQ -->
-   
-
-    <!-- popup -->
-    <!-- <section id="popup">
-        <div class="fixed bottom-4 right-4 z-[999] mb-4">
-            <div class="bg-[#003a0b] fa-beat text-6xl h-full rounded-full">
-                <a href="#">
-                    <i class="fa-brands fa-whatsapp fa-sm p-2 rounded-full m-2 text-center h-auto text-white "></i>
-                </a>
+        <div class="container mx-auto  flex flex-col flex-wrap items-center gap-4  sm:flex-row sm:justify-center sm:gap-6">
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">PEPPRESO</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-regular fa-star text-[#ffd500]"></i>
+                        <i class="fa-regular fa-star text-[#ffd500]"></i>
+                        <span id="rate">3.0</span>
+                    </p>
+                    <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                </div>
             </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">SHIBACHINO</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-regular fa-star text-[#ffd500]"></i>
+                        <i class="fa-regular fa-star text-[#ffd500]"></i>
+                        <span id="rate">3.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">ETHERLATTE</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <span id="rate">5.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">SOLANOPI</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-regular fa-star text-[#ffd500]"></i>
+                        <span id="rate">4.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">BITCHIATO</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <span id="rate">5.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">RIPPLELATTO</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <span id="rate">5.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">MOCALITEC</h1>
+                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
+                    <p class="text-sm tracking-tight mb-4"> 
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <i class="fa-solid fa-star text-[#ffd500]"></i>
+                        <span id="rate">5.0</span>
+                    </p>
+                    <div class="flex w-fit   ">
+                          <div class="flex w-full   ">
+                        <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                            Tambah Keranjang
+                        </div>
+                    </div>   
+                    </div>   
+                </div>
+            </div>
+         </div>   
+       
+    </section>
+
+
+
+    <!-- kontak -->
+    <section id="kontak" class="pt-20 pb-10 scroll-p-12 ">
+        <span>
+            <h1 class="text-2xl font-bold text-white text-center xl:text-4xl mb-4 xl:mb-8">Kontak Kami</h1>
+        </span>
+        <div class="container mx-auto gap-4 flex flex-col md:flex-row justify-center items-center w-screen">
+            <div class="flex gap-4 sm:m-0 h-fit p-2 order-2 md:flex-col">
+                <div class="flex text-center gap-2">
+                    <a href="" class="text-2xl inline font-bold text-zinc-600 hover:text-zinc-700 py-3 ">
+                        <i class="fa-brands fa-square-whatsapp fa-2xl"></i>
+                    </a>
+                    <h1 class="text-2xl hidden font-bold text-white py-3 md:inline md:text-3xl">08XXXXASXX</h1>
+                </div>
+                <div class="flex text-center gap-2">
+                    <a href="" class="text-2xl inline font-bold text-zinc-600 hover:text-zinc-700 py-3 ">
+                        <i class="fa-brands fa-2xl fa-square-instagram"></i>
+                    </a>
+                    <h1 class="text-2xl hidden font-bold text-white py-3 md:inline md:text-3xl">@fajaramadhan436</h1>
+                </div>
+                <div class="flex text-center gap-2">
+                    <a href="" class="text-2xl inline font-bold text-zinc-600 hover:text-zinc-700 py-3 ">
+                        <i class="fa-brands fa-2xl fa-facebook"></i>
+                    </a>
+                    <h1 class="text-2xl hidden font-bold text-white py-3 md:inline md:text-3xl">Fajar Ramadhan</h1>
+                </div>
+                <div class="flex text-center gap-2">
+                    <a href="" class="text-2xl inline font-bold text-zinc-600 hover:text-zinc-700 py-3 ">
+                        <i class="fa-brands fa-2xl fa-square-x-twitter"></i>
+                    </a>
+                    <h1 class="text-2xl hidden font-bold text-white py-3 md:inline md:text-3xl">@fajaramadhan436</h1>
+                </div>
+                
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.248188136!2d139.6007803883118!3d35.66844146514209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sid!4v1625851773853!5m2!1sen!2sid" 
+             height="350" style="border:0;" allowfullscreen="" loading="lazy" class="w-full md:w-1/2 border rounded-xl"></iframe>
         </div>
-    </section> -->
+    </section>
+
+
+
 
 
     <!-- footer -->
-    <!-- <footer class="bg-gray-800" >
+    <footer class="bg-gray-800" >
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-400 sm:text-center ">© 2023 <a href="#" class="hover:underline">BkWEb™ | Fajar Ramadhan</a>. All Rights Reserved.
         </span>
@@ -274,29 +347,86 @@
             </li>
         </ul>
         </div>
-    </footer> -->
+    </footer>
+
+     <!-- product model card -->
+     <div id="model-card" class="hidden fixed z-[9999] left-0 top-0 h-screen w-screen bg-[rgba(0, 0, 0, 0.8)] items-center justify-center">
+        <!-- card Container -->
+        <div class="flex flex-col p-6 m-3 space-y-2 bg-zinc-800 rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
+           <div class="flex w-full justify-end md:order-3 md:w-fit md:justify-start md:items-start">
+               <button id="close-btn" type="button" class="p-0 m-0 text-white">
+                   <i class="fa-solid fa-x fa-lg"></i> 
+                </button>
+            </div>
+            <!-- Image div -->
+            <div>
+                <img src="./asset/menu-dummy.jpeg" alt="dummy" class="mx-auto
+                duration-200 w-60 hover:scale-105" />
+            </div>
+            <!-- Content -->
+            <div class="flex flex-col space-y-6">
+                <!-- Label & Description Container-->
+                <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+                    <div>
+                        <div class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
+                            Free Shipping
+                        </div>
+                    </div>
+                    <!-- Title -->
+                    <div class="max-w-sm text-xl font-medium">
+                        Razer Kraken Kutty Edt Gaming Headset Quartz
+                    </div>
+                    <!-- Price Container -->
+                    <div class="flex flex-col mb-4 space-y-3 text-center md:text-left ">
+                        <p class="text-2xl font-bold">$599</p>
+                    </div>
+                    <!-- button Group -->
+                    <div class="group">
+                        <div
+                            class="flex w-full mb-4 px-2 justify-center items-center md:justify-start border-gray-300 rounded-lg shadow-sm">
+                            <p class="text-sm tracking-tight"> 
+                                <i class="fa-solid fa-star text-[#ffd500]"></i>
+                                <i class="fa-solid fa-star text-[#ffd500]"></i>
+                                <i class="fa-solid fa-star text-[#ffd500]"></i>
+                                <i class="fa-solid fa-star text-[#ffd500]"></i>
+                                <i class="fa-solid fa-star text-[#ffd500]"></i>
+                                <span id="rate">5.0</span>
+                            </p>
+                        </div>
+                        <button
+                            class="w-full transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
+                            <div class="px-4 py-3 duration-150 bg-yellow-500 rounded-lg">
+                                Tambahkan Keranjang
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-
-<script>
     // show navbar
+<script>
     document.addEventListener("DOMContentLoaded", () => {
         const navbarButton = document.getElementById("navbar-sticky");
         const navbarList = document.getElementById("nav-list");
 
         navbarButton.addEventListener("click", () => {
             navbarList.classList.toggle("hidden");
+            nav.style.backgroundColor = 'rgba(9,9,11, 0.8)';
         });
     });
 </script>
+
+// dropdown
 <script>
-    // faq expand
-    const faq = document.querySelectorAll('.faq');
+    const faq = document.querySelectorAll('.menu');
 
     faq.forEach(faq => {
-        const question = faq.querySelector('.question');
-        const answer = faq.querySelector('.answer');
+        const question = faq.querySelector('.main');
+        const answer = faq.querySelector('.list');
 
         question.addEventListener("click", () => {
             faq.classList.toggle("active");
@@ -309,24 +439,53 @@
     })
 </script>
 
+<!-- scroll -->
 <script>
     const nav = document.getElementById('nav');
 
-function changeBg() {
-    if (window.scrollY > 20){
-        nav.style.backgroundColor = 'rgba(9,9,11)';
-        nav.style.borderBottom = '1px solid gainsboro';
-    } else {
-        nav.style.backgroundColor = 'transparent';
-        nav.style.borderBottom = 'none';
-    }
-    
-}
+    function changeBg() {
+        if (window.scrollY > 20){
+            nav.style.backgroundColor = 'rgba(9,9,11, 0.8)';
+            nav.style.borderBottom = '1px solid gainsboro';
+        } else {
+            nav.style.backgroundColor = 'transparent';
+            nav.style.borderBottom = 'none';
+        }
+        
+    };
 
-window.addEventListener('scroll', changeBg)
-
-
+    window.addEventListener('scroll', changeBg);
 </script>
+
+<!-- show card model -->
+<script>
+    const cardMenu = document.querySelectorAll('.card-menu')
+    const modelCard = document.getElementById('model-card');
+    const closeBtn = document.getElementById('close-btn');
+
+    function showCard() {
+        cardMenu.forEach(cardMenu => {
+            cardMenu.addEventListener('click', () => {
+                modelCard.style.display = 'flex';
+            });
+        });
+    };
+    function closeCard() {
+        closeBtn.addEventListener('click', () => {
+            modelCard.style.display = 'none';
+        });
+        window.onclick = (e) => {
+            if (e.target === modelCard){
+            modelCard.style.display = 'none';
+            }
+        }
+    };
+    
+    closeCard()
+    showCard();
+</script>
+<!-- close card model -->
+
 
 </body>
 </html>
