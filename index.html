@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Tailwind</title>
+    <title>Bitcaffee</title>
     <link rel="icon" type="image/x-icon" href="./asset/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="./style/tailwind.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
           theme: {
             extend: {
               fontFamily: {
-                lobster: "'Nunito', cursive",
+                lobster: "'Yanone Kaffeesatz', sans-serif",
               },
               backgroundImage: {
                 banner: "url('./asset/banner.jpg')",
@@ -33,14 +34,14 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">itcaffe</span>
         </a>
         <div class="flex md:order-2 justify-between gap-1">
-            <button id="cart" type="button" class="p-2">
+            <a href="#" id="cart-btn" class="p-2">
                 <i class="fa-solid fa-cart-shopping fa-lg text-white hover:text-zinc-400"></i>
-            </button>
-            <button id="navbar-sticky" type="button" class=" inline-flex items-center mt-1 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
+            </a>
+            <a href="#" id="navbar-sticky" class="inline-flex items-center mt-1 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
               <svg class="w-5 h-5" >
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
-            </button>
+            </a>
         </div>
         <div id="nav-list" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" >
           <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  xl:text-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
@@ -59,6 +60,34 @@
           </ul>
         </div>
         </div>
+        <!-- sidebar cart -->
+        <div id="cart-sidebar" class="shopping-cart absolute top-full h-[100vh] w-[20rem] py-0 px-6 overflow-scroll bg-zinc-900 transition-all">
+            <div class="card">
+                <div class=" justify-center items-center hidden border-b py-2 my-6"><span>keranjang masih kosong nih!</span></div>
+                <div id="list-cart" class="container flex flex-wrap items-center justify-between space-y-2 py-4 border-b ">
+                    <div class="flex gap-4">
+                        <div class="img h-auto w-14 inline rounded-full">
+                            <img src="./asset/menu-dummy.jpeg" alt="dummy" class="rounded-full inline">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white text-sm ">ETHERLATTE</h3>
+                            <h5 class="text-white">Rp. 5000</h5>
+                        </div>
+                    </div>
+                    <button type="button" class="flex items-endjustify-end px-2">
+                        <i class="fa-solid fa-trash text-white hover:text-zinc-400"></i>
+                    </button>
+                </div>
+                <div class="flex justify-end items-end py-2 my-6"><span>Total: Rp.5000</span></div>
+                <div class="fixed border bottom-0 bg-blue-500">
+                    <button type="button" class="flex justify-center items-center w-max border bottom-0 left-0 absolute px-2 py-2 rounded-t-xl bg-yellow-700 text-white border-b-8 border-b-yellow-700">
+                        <a href="#">
+                            BAYAR TAGIHAN
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>   
     </nav>
 
     <!-- hero -->
@@ -280,13 +309,12 @@
                 </div>
             </div>
          </div>   
-       
     </section>
 
 
 
     <!-- kontak -->
-    <section id="kontak" class="pt-20 pb-10 scroll-p-12 ">
+    <section id="kontak" class="pt-20 pb-10 scroll-p-12">
         <span>
             <h1 class="text-2xl font-bold text-white text-center xl:text-4xl mb-4 xl:mb-8">Kontak Kami</h1>
         </span>
@@ -320,11 +348,8 @@
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.248188136!2d139.6007803883118!3d35.66844146514209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sid!4v1625851773853!5m2!1sen!2sid" 
              height="350" style="border:0;" allowfullscreen="" loading="lazy" class="w-full md:w-1/2 border rounded-xl"></iframe>
-        </div>
+            </div>
     </section>
-
-
-
 
 
     <!-- footer -->
@@ -394,7 +419,7 @@
                             </p>
                         </div>
                         <button
-                            class="w-full transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
+                            class="w-full font-mono transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg md:text-2xl group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
                             <div class="px-4 py-3 duration-150 bg-yellow-500 rounded-lg">
                                 Tambahkan Keranjang
                             </div>
@@ -407,85 +432,7 @@
 
 
 
-    // show navbar
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navbarButton = document.getElementById("navbar-sticky");
-        const navbarList = document.getElementById("nav-list");
-
-        navbarButton.addEventListener("click", () => {
-            navbarList.classList.toggle("hidden");
-            nav.style.backgroundColor = 'rgba(9,9,11, 0.8)';
-        });
-    });
-</script>
-
-// dropdown
-<script>
-    const faq = document.querySelectorAll('.menu');
-
-    faq.forEach(faq => {
-        const question = faq.querySelector('.main');
-        const answer = faq.querySelector('.list');
-
-        question.addEventListener("click", () => {
-            faq.classList.toggle("active");
-            if (faq.classList.contains("active")) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                answer.style.maxHeight = null;
-            }
-        });
-    })
-</script>
-
-<!-- scroll -->
-<script>
-    const nav = document.getElementById('nav');
-
-    function changeBg() {
-        if (window.scrollY > 20){
-            nav.style.backgroundColor = 'rgba(9,9,11, 0.8)';
-            nav.style.borderBottom = '1px solid gainsboro';
-        } else {
-            nav.style.backgroundColor = 'transparent';
-            nav.style.borderBottom = 'none';
-        }
-        
-    };
-
-    window.addEventListener('scroll', changeBg);
-</script>
-
-<!-- show card model -->
-<script>
-    const cardMenu = document.querySelectorAll('.card-menu')
-    const modelCard = document.getElementById('model-card');
-    const closeBtn = document.getElementById('close-btn');
-
-    function showCard() {
-        cardMenu.forEach(cardMenu => {
-            cardMenu.addEventListener('click', () => {
-                modelCard.style.display = 'flex';
-            });
-        });
-    };
-    function closeCard() {
-        closeBtn.addEventListener('click', () => {
-            modelCard.style.display = 'none';
-        });
-        window.onclick = (e) => {
-            if (e.target === modelCard){
-            modelCard.style.display = 'none';
-            }
-        }
-    };
-    
-    closeCard()
-    showCard();
-</script>
-<!-- close card model -->
-
+<script src="./script/script.js"></script>
 
 </body>
 </html>

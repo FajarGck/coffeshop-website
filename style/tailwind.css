@@ -11,3 +11,10 @@
         opacity: 1;
     }
 }
+#cart-sidebar {
+    right: -100%;
+}
+
+#cart-sidebar.active {
+    right: 0%;
+}
