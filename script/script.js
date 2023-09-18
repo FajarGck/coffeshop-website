@@ -26,8 +26,8 @@
          e.preventDefault();
      });
      document.addEventListener('click', (e) => {
-     if (!navbarBtn.contains(e.target)) {
-         navbarList.classList.add("hidden"); // Gunakan "add" untuk memastikan elemen disembunyikan
+     if (!navbarBtn.contains(e.target) && !navbarList.contains(e.target)) {
+         navbarList.classList.add("hidden");
      }
  });
  });
@@ -219,6 +219,8 @@ addCartBtn.addEventListener('click', () => {
         toastBox.removeChild(newToast);
     }, 3000)    
     
-
-    
 };
+
+// export default totalPrice;
+
+
