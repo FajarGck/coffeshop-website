@@ -25,7 +25,13 @@
     </script>
 </head>
 <body class="font-lobster bg-zinc-950 text-white">
+   
+        <!-- toast notifikation -->
+    <div id="toast-container" class="fixed right-0 top-6 z-[9999]">
+        <!-- Daftar notifikasi akan muncul di sini -->
+    </div>
     
+
     <!-- nav -->
     <nav id="nav" class="bg-transparent fixed w-full z-20 top-0 left-0 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -36,6 +42,7 @@
         <div class="flex md:order-2 justify-between gap-1">
             <a href="#" id="cart-btn" class="p-2">
                 <i class="fa-solid fa-cart-shopping fa-lg text-white hover:text-zinc-400"></i>
+                <!-- <span class="text-lg text-red-700">*</span> -->
             </a>
             <a href="#" id="navbar-sticky" class="inline-flex items-center mt-1 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
               <svg class="w-5 h-5" >
@@ -63,22 +70,11 @@
         <!-- sidebar cart -->
         <div id="cart-sidebar" class="shopping-cart absolute top-full h-[100vh] w-[20rem] py-0 px-6 overflow-scroll bg-zinc-900 transition-all">
             <div class="card">
-                <div class=" justify-center items-center hidden border-b py-2 my-6"><span>keranjang masih kosong nih!</span></div>
+                <div id="cart-message" class="flex justify-center items-center py-2 mt-6"><span>keranjang masih kosong nih!</span></div>
                 <div id="list-cart" class="container flex flex-wrap items-center justify-between space-y-2 py-4 border-b ">
-                    <div class="flex gap-4">
-                        <div class="img h-auto w-14 inline rounded-full">
-                            <img src="./asset/menu-dummy.jpeg" alt="dummy" class="rounded-full inline">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="text-white text-sm ">ETHERLATTE</h3>
-                            <h5 class="text-white">Rp. 5000</h5>
-                        </div>
-                    </div>
-                    <button type="button" class="flex items-endjustify-end px-2">
-                        <i class="fa-solid fa-trash text-white hover:text-zinc-400"></i>
-                    </button>
+                    <!-- isi cart -->
                 </div>
-                <div class="flex justify-end items-end py-2 my-6"><span>Total: Rp.5000</span></div>
+                <div id="total-amount" class="flex justify-end items-end py-2 my-6"><span>Total: Rp.0</span></div>
                 <div class="fixed border bottom-0 bg-blue-500">
                     <button type="button" class="flex justify-center items-center w-max border bottom-0 left-0 absolute px-2 py-2 rounded-t-xl bg-yellow-700 text-white border-b-8 border-b-yellow-700">
                         <a href="#">
@@ -89,6 +85,7 @@
             </div>
         </div>   
     </nav>
+
 
     <!-- hero -->
     <section id="hero" class="h-screen shadow-sm bg-banner bg-no-repeat bg-cover bg-blend-darken bg-right md:bg-right-bottom">
@@ -143,7 +140,7 @@
                 <span id="product" class="absolute">
                     <button type="menu" class="menu container w-full bg-zinc-900 mx-auto ">
                         <div class="main px-2 flex justify-between gap-2">
-                            <h2 class="tracking-tight font-bold space-x-2 text-zinc-50 md:text-xl">Minuman</h2>
+                            <h2 class="tracking-tight font-bold space-x-2 text-zinc-50 md:text-xl">Kopi</h2>
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:white}</style><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
                         </div>
                         <div class="list flex flex-col overflow-hidden max-h-0 active:max-h-max">
@@ -156,12 +153,16 @@
             </h1>
         </div>
         <div class="container mx-auto  flex flex-col flex-wrap items-center gap-4  sm:flex-row sm:justify-center sm:gap-6">
-            <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+            <div id="card-menu"  class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">PEPPRESO</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">PEPPRESO</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 4000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Rasa pahit dari meme vibes membuat adrenaline meningkat
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -179,9 +180,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">SHIBACHINO</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">SHIBACHINO</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Sensasi inuShiba dari japanese meme memberikan sensasi geli
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -201,9 +206,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">ETHERLATTE</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">ETHERLATTE</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 7000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Nikmati kesegaran dari inovasi rasa proof of stack yg merevolusi.
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -223,9 +232,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">SOLANOPI</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">SOLANOPI</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Kecepatan mood boost membuat badan ingin berdansa.
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -245,9 +258,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">BITCHIATO</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">BITCHIATO</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Kenikmatan yang dirasa seakan menghempas segala kecemasan.
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -267,9 +284,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">RIPPLELATTO</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">RIPPLELATTO</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Rasakan kemenangan SEC yang meningkatkan dopamine.
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -289,9 +310,13 @@
             <div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">MOCALITEC</h1>
-                    <h1 class="text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h1>
-                    <p class="text-sm tracking-tight mb-4"> 
+                    <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">MOCALITEC</h1>
+                    <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 4000</h2>
+                    <!-- desrpition menu -->
+                     <div class="product-descript hidden max-w-sm text-lg font-medium">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, quo.
+                    </div>
+                    <p id="rating" class="rating text-sm tracking-tight mb-4"> 
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
                         <i class="fa-solid fa-star text-[#ffd500]"></i>
@@ -375,7 +400,7 @@
     </footer>
 
      <!-- product model card -->
-     <div id="model-card" class="hidden fixed z-[9999] left-0 top-0 h-screen w-screen bg-[rgba(0, 0, 0, 0.8)] items-center justify-center">
+     <div id="model-card" class="hidden fixed z-[9988] left-0 top-0 h-screen w-screen bg-[rgba(0, 0, 0, 0.8)] items-center justify-center">
         <!-- card Container -->
         <div class="flex flex-col p-6 m-3 space-y-2 bg-zinc-800 rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
            <div class="flex w-full justify-end md:order-3 md:w-fit md:justify-start md:items-start">
@@ -394,16 +419,11 @@
                 <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
                     <div>
                         <div class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
-                            Free Shipping
+                            best product
                         </div>
                     </div>
-                    <!-- Title -->
-                    <div class="max-w-sm text-xl font-medium">
-                        Etherlatte is famous coffee with proof of stack vibes
-                    </div>
-                    <!-- Price Container -->
-                    <div class="flex flex-col mb-4 space-y-3 text-center md:text-left ">
-                        <p class="text-2xl font-bold">Rp. 5000</p>
+                    <div id="detail" class="detail">
+                        <!-- isi content -->
                     </div>
                     <!-- button Group -->
                     <div class="group">
@@ -418,8 +438,7 @@
                                 <span id="rate">5.0</span>
                             </p>
                         </div>
-                        <button
-                            class="w-full font-mono transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg md:text-2xl group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
+                        <button id="add-cart-btn" class="add-cart-btn w-full font-mono transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg md:text-2xl group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
                             <div class="px-4 py-3 duration-150 bg-yellow-500 rounded-lg">
                                 Tambahkan Keranjang
                             </div>
