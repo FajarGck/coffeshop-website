@@ -1,3 +1,39 @@
+ import products from "./data.js";
+ 
+
+ // nampilin data produk
+ function showData() {
+     const boxMenu = document.getElementById("box-menu");
+    for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+        const menuElements = document.createElement('div');
+        menuElements.innerHTML = `
+        <div id="card-menu" class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+        <img src="${product.img}" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">${product.name}</h1>
+            <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. ${product.price}</h2>
+            <h3 id="menu-rate" class="menu-rate text-lg font-bold tracking-tight mb-2">Rating: <span class="text-yellow-400">${product.rate.toFixed(1)}</span></h3>
+            <!-- desrpition menu -->
+             <div class="product-descript hidden max-w-sm text-lg font-medium">
+                ${product.description}
+            </div>
+            <div class="flex w-full   ">
+                <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                    Tambah Keranjang
+                </div>
+            </div>   
+        </div>
+        </div>
+        `; boxMenu.appendChild(menuElements);
+    }
+ }
+
+ showData();
+ 
+
+
+
  // <!-- scroll -->
  const nav = document.getElementById('nav');
 
@@ -12,7 +48,6 @@
 
  };
  window.addEventListener('scroll', changeBg);
-
 
 
   // show navbar 
@@ -69,7 +104,6 @@
 
 
 // show card model
-
  const cardMenu = document.querySelectorAll('.card-menu')
  const modelCard = document.getElementById('model-card');
  const closeBtn = document.getElementById('close-btn');
@@ -77,6 +111,7 @@
  const addCartBtn = document.getElementById('add-cart-btn');
  let itemName = '';
  let itemPrice = 0;
+ let itemRate = 0;
 
 function showCard() {
     cardMenu.forEach(cardMenu => {
@@ -85,6 +120,8 @@ function showCard() {
             const itemPriceText = cardMenu.querySelector('.menu-price').textContent;
             itemPrice = parseFloat(itemPriceText.replace('Rp. ', ''));
             const itemDscrpt = cardMenu.querySelector('.product-descript').textContent;
+            const itemRateElement = cardMenu.querySelector('.menu-rate span');
+            itemRate = parseFloat(itemRateElement.textContent);
             
             modelCard.style.display = 'flex';
 
@@ -98,9 +135,15 @@ function showCard() {
                    ${itemDscrpt}
                 </div>
                 <!-- Price Container -->
-                <div class="flex flex-col mb-4 space-y-3 text-center md:text-left ">
+                <div class="flex flex-col mb-2 space-y-3 text-center md:text-left ">
                     <p id="product-model-price" class="product-model-price text-2xl font-bold">Rp. ${itemPrice}</p>
                 </div>
+                <!-- rate Container -->
+                <div class="flex w-fit border mb-4 px-2 justify-center items-center md:justify-start border-gray-300 rounded-lg shadow-sm">
+                    <p class="text-lg font-semibold tracking-tight"> 
+                         Rating:<span class="text-yellow-400"> ${itemRate.toFixed(1)}</span>
+                    </p>
+            </div>
             `;
         });
     });
@@ -124,7 +167,7 @@ function showCard() {
 
  let cart = [];
  let totalPrice = 0;
- const maxItem = 5;
+ const maxItem = 10;
 
 
 addCartBtn.addEventListener('click', () => {

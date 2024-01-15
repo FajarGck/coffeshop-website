@@ -1,0 +1,175 @@
+
+
+<div id="card-menu"  class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">PEPPRESO</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 4000</h2>
+        <h3 id="menu-rate" class="menu-rate text-lg font-bold tracking-tight mb-2">Rating: <span class="text-yellow-400">4.0</span></h3>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Rasa pahit dari meme vibes membuat adrenaline meningkat
+        </div>
+        <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">SHIBACHINO</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 5000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Sensasi inuShiba dari japanese meme memberikan sensasi geli
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-regular fa-star text-[#ffd500]"></i>
+            <i class="fa-regular fa-star text-[#ffd500]"></i>
+            <span id="rate">3.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">ETHERLATTE</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 7000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Nikmati kesegaran dari inovasi rasa proof of stack yg merevolusi.
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <span id="rate">5.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">SOLANOPI</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Kecepatan mood boost membuat badan ingin berdansa.
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-regular fa-star text-[#ffd500]"></i>
+            <span id="rate">4.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">BITCHIATO</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Kenikmatan yang dirasa seakan menghempas segala kecemasan.
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <span id="rate">5.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">RIPPLELATTO</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 6000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Rasakan kemenangan SEC yang meningkatkan dopamine.
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <span id="rate">5.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
+<div class="card-menu flex flex-col w-72 min-h-[10rem] overflow-hidden rounded-2xl shadow-md shadow-zinc-800 bg-zinc-900 hover:shadow-lg hover:shadow-zinc-800 hover:-translate-y-0.5 transition-all duration-150">
+    <img src="./asset/menu-dummy.jpeg" alt="dummy" class="w-full object-top h-full object-cover rounded-t-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h1 id="menu-name" class="menu-name text-2xl font-bold tracking-tight mb-2 ">MOCALITEC</h1>
+        <h2 id="menu-price" class="menu-price text-2xl font-bold tracking-tight mb-2 ">Rp. 4000</h2>
+        <!-- desrpition menu -->
+         <div class="product-descript hidden max-w-sm text-lg font-medium">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, quo.
+        </div>
+        <p id="rating" class="rating text-sm tracking-tight mb-4"> 
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <i class="fa-solid fa-star text-[#ffd500]"></i>
+            <span id="rate">5.0</span>
+        </p>
+        <div class="flex w-fit   ">
+              <div class="flex w-full   ">
+            <div class="inline-flex w-fit  font-mono ring-1 text-l px-5 py-2 mr-3 text-white font-semibold text-center rounded-lg bg-yellow-600 md:text-xl hover:bg-yellow-700 focus:ring-4 ">
+                Tambah Keranjang
+            </div>
+        </div>   
+        </div>   
+    </div>
+</div>
