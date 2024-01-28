@@ -125,20 +125,17 @@ function showCard() {
             
             modelCard.style.display = 'flex';
 
+            
             detail.innerHTML = `
-                <!-- name product -->
                 <div id="product-model-name" class="product-model-name max-w-sm text-xl font-medium">
                     ${itemName}
                 </div>
-                <!-- descript -->
                 <div id="product-model-descrpt" class="product-model-name max-w-sm text-lg font-medium">
                    ${itemDscrpt}
                 </div>
-                <!-- Price Container -->
                 <div class="flex flex-col mb-2 space-y-3 text-center md:text-left ">
                     <p id="product-model-price" class="product-model-price text-2xl font-bold">Rp. ${itemPrice}</p>
                 </div>
-                <!-- rate Container -->
                 <div class="flex w-fit border mb-4 px-2 justify-center items-center md:justify-start border-gray-300 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold tracking-tight"> 
                          Rating:<span class="text-yellow-400"> ${itemRate.toFixed(1)}</span>
@@ -264,6 +261,5 @@ addCartBtn.addEventListener('click', () => {
     
 };
 
-// export default totalPrice;
 
 

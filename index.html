@@ -28,7 +28,6 @@
    
         <!-- toast notifikation -->
     <div id="toast-container" class="fixed right-0 top-6 z-[9999]">
-        <!-- Daftar notifikasi akan muncul di sini -->
     </div>
     
 
@@ -221,31 +220,25 @@
 
      <!-- product model card -->
      <div id="model-card" class="hidden fixed z-[9988] left-0 top-0 h-screen w-screen bg-[rgba(0, 0, 0, 0.8)] items-center justify-center">
-        <!-- card Container -->
         <div class="flex flex-col p-6 m-3 space-y-2 bg-zinc-800 rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
            <div class="flex w-full justify-end md:order-3 md:w-fit md:justify-start md:items-start">
                <button id="close-btn" type="button" class="p-0 m-0 text-white">
                    <i class="fa-solid fa-x fa-lg"></i> 
                 </button>
             </div>
-            <!-- Image div -->
-            <div>
+            <div id="img-model">
                 <img src="./asset/menu-dummy.jpeg" alt="dummy" class="mx-auto
                 duration-200 w-60 hover:scale-105" />
             </div>
-            <!-- Content -->
             <div class="flex flex-col space-y-6">
-                <!-- Label & Description Container-->
                 <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
                     <div>
                         <div class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
-                            best product
+                            Best Product!
                         </div>
                     </div>
                     <div id="detail" class="detail">
-                        <!-- isi content -->
                     </div>
-                    <!-- button Group -->
                     <div class="group">
                         <button id="add-cart-btn" class="add-cart-btn w-full font-mono transition-all duration-150 bg-yellow-700 text-white border-b-8 border-b-yellow-700 rounded-lg md:text-2xl group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-yellow-700 group-hover:border-t-yellow-700 group-hover:shadow-lg">
                             <div class="px-4 py-3 duration-150 bg-yellow-500 rounded-lg">
